@@ -8,12 +8,14 @@ const showMenu = (toggleId, navId) =>{
         toggle.addEventListener('click', ()=>{
             // We add the show-menu class to the div tag with the nav__menu class
             nav.classList.toggle('show-menu')
+            toggle.setAttribute('aria-expanded', nav.classList.contains('show-menu'))
         })
 
         toggle.addEventListener('keydown', (e) => {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault()
                 nav.classList.toggle('show-menu')
+                toggle.setAttribute('aria-expanded', nav.classList.contains('show-menu'))
             }
         })
     }
@@ -27,6 +29,10 @@ function linkAction(){
     const navMenu = document.getElementById('nav-menu')
     // When we click on each nav__link, we remove the show-menu class
     navMenu.classList.remove('show-menu')
+    const navToggle = document.getElementById('nav-toggle')
+    if (navToggle) {
+        navToggle.setAttribute('aria-expanded', 'false')
+    }
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
