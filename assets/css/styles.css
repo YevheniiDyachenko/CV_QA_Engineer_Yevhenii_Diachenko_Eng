@@ -298,7 +298,13 @@ img{
   cursor: pointer;
 }
 
-.nav__toggle:focus-visible{
+.nav__toggle:focus-visible,
+.nav__link:focus-visible,
+.home__link:focus-visible,
+.social__link:focus-visible,
+.education__link:focus-visible,
+.certificate__link:focus-visible,
+.home__button-movil:focus-visible{
   outline: 2px solid var(--title-color);
   outline-offset: 4px;
 }
