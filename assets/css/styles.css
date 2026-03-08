@@ -66,6 +66,11 @@ body.dark-theme{
   color: var(--title-color);
 }
 
+.change-theme:focus-visible{
+  outline: 2px solid var(--title-color);
+  outline-offset: 4px;
+}
+
 /*Font size variables to scale cv*/
 body.scale-cv{
   --h1-font-size: .938rem;
@@ -89,6 +94,11 @@ body.scale-cv{
 
 .generate-pdf:hover{
   color: var(--title-color);
+}
+
+.generate-pdf:focus-visible{
+  outline: 2px solid var(--title-color);
+  outline-offset: 4px;
 }
 
 /*========== Classes modified to reduce size and print on A4 sheet ==========*/
@@ -286,6 +296,11 @@ img{
 .nav__toggle{
   font-size: 1.2rem;
   cursor: pointer;
+}
+
+.nav__toggle:focus-visible{
+  outline: 2px solid var(--title-color);
+  outline-offset: 4px;
 }
 
 .nav__item{
@@ -582,6 +597,11 @@ img{
 .scrolltop__icon{
   font-size: 1.2rem;
   color: var(--text-color);
+}
+
+.scrolltop:focus-visible{
+  outline: 2px solid var(--title-color);
+  outline-offset: 4px;
 }
 
 .show-scroll{
